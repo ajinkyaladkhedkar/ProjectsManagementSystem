@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Add_student_details</title>
+	<link rel="stylesheet" type="text/css" href="Home_page.css">
+	<script>
+	function validateSID() 
+	{
+    	var x = document.forms["myForm"]["sacstateid"].value;
+    	if (x == null || x == "") 
+    	{
+        	alert("Sac State ID must be filled out");
+        	return false;
+    	}
+    }
+	</script>
+<script>
+
+function checkEmail() 
+{
+    var emailid = document.getElementById('emailid');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(emailid.value)) 
+    {
+    alert('Please provide a valid email address');
+    emailid.focus;
+    return false;
+ 	}
+}
+</script>
+	</head>
+	
+	<body class="center">
+		<table><tr><td><a href="Student_details.html"><h4 align="left">Previous</h4></a></td></tr></table>
+		<h1>Add Student Details</h1><br><br>
+		<form name="myForm" action="Add_student_details.jsp" onsubmit="return checkEmail()" method="post">
+		First Name: &nbsp; &nbsp; <input type="text" name="firstname"><br><br>
+		Last Name: &nbsp; &nbsp; <input type="text" name="lastname"><br><br>
+		Sac State ID: &nbsp; <input type="text" name="sacstateid"><br><br>
+		Email ID: &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="emailid"><br><br>
+		Cell No: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="cellnum"><br><br>
+		<input type = "submit" value = "Register" ><br><br>
+		</form>	
+		<br><br><br><br><br><br><table align="right"><tr><td><a href="Home_page.jsp"><h4 align="left">Go to Home Page</h4></a></td></tr></table>
+	</body>
+</html>

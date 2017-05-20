@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-image: url("background.jpg");
+	background-color: white;
+	text-align: center;
+}
+h1{
+	color: purple;
+	text-align: center;
+}
